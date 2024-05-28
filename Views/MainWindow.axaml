@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TestOneModelTwoViews.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TestOneModelTwoViews.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+		xmlns:v="using:TestOneModelTwoViews.Views"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="TestOneModelTwoViews">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Grid ColumnDefinitions="*,*" Margin="20">
+		<StackPanel Grid.Column="0">
+			<Label>Settings</Label>
+			<v:SettingsView DataContext="{Binding SettingsViewModel}" Grid.Column="0"></v:SettingsView>
+		</StackPanel>
+		<StackPanel Grid.Column="1">
+			<Label>Plot</Label>
+			<v:PlotView DataContext="{Binding PlotViewModel}" Grid.Column="1"></v:PlotView>
+		</StackPanel>
+	</Grid>
+</Window>
