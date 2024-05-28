@@ -4,6 +4,8 @@ This example project shows how to keep view syncrhonised with the same model obj
 
 # The problem
 
+![Imagine the view on the left is some "settings" view and the view on the right is a "plot" view](ui.png?raw=true "Mock UI")
+
 Play along. Imagine the view on the left is some "settings" view and the view on the right is a "plot" view.
 
 The settings wants to display the current axis limits of the plot. However! The use can edit the settings text boxes to update the plot and the user can pan the plot to update the text boxes.
