@@ -5,12 +5,12 @@
 			 xmlns:vm="using:TestOneModelTwoViews.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="TestOneModelTwoViews.Views.SettingsView"
-	         x:DataType="vm:SettingsViewModel">
+			 x:DataType="vm:SettingsViewModel">
 
 	<StackPanel Margin="20">
 		<TextBlock Margin="0 5">Min:</TextBlock>
-		<TextBox Text="{Binding Min}"/>
+		<TextBox Text="{Binding AxisLimitsViewModel.Min}"/>
 		<TextBlock Margin="0 5">Max:</TextBlock>
-		<TextBox Text="{Binding Max}"/>
+		<TextBox Text="{Binding AxisLimitsViewModel.Max}"/>
 	</StackPanel>
 </UserControl>

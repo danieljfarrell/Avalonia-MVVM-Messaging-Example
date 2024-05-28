@@ -6,11 +6,10 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="TestOneModelTwoViews.Views.PlotView"
 			 x:DataType="vm:PlotViewModel">
-	
 	<StackPanel Margin="20">
 		<TextBlock Margin="0 5">Min:</TextBlock>
-		<TextBox Text="{Binding Min}"/>
+		<TextBox Text="{Binding AxisLimitsViewModel.Min}"/>
 		<TextBlock Margin="0 5">Max:</TextBlock>
-		<TextBox Text="{Binding Max}"/>
+		<TextBox Text="{Binding AxisLimitsViewModel.Max}"/>
 	</StackPanel>
 </UserControl>
